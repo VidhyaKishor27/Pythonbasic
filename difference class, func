@@ -1,0 +1,102 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN3i9bLybQS27CgojRt5aaN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/VidhyaKishor27/Pythonbasic/blob/main/difference%20class%2C%20func\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bizBexel13m4"
+      },
+      "outputs": [],
+      "source": [
+        "#functions & classes - difference\n",
+        "'''\n",
+        "Functions do specific things, classes are specific things.\n",
+        "\n",
+        "Classes often have methods, which are functions that are associated with a particular class, and do things associated with the thing that the class is - but if all you want is to do something, a function is all you need.\n",
+        "\n",
+        "Essentially, a class is a way of grouping functions (as methods) and data (as properties) into a logical unit revolving around a certain kind of thing. If you don't need that grouping, there's no need to make a class.\n",
+        "\n",
+        "class Person(object):\n",
+        "    def __init__(self, arg1, arg2):\n",
+        "        self.arg1 = arg1\n",
+        "        self.arg2 = arg2\n",
+        "\n",
+        "    def compute(self, other):\n",
+        "        \"\"\" Example of bad class design, don't care about the result \"\"\"\n",
+        "        return self.arg1 + self.arg2 % other\n",
+        "Here you just have a function encapsulate in a class. This just make the code less readable and less efficient.\n",
+        "In fact the function compute can be written just like this:\n",
+        "\n",
+        "def compute(arg1, arg2, other):\n",
+        "     return arg1 + arg2 % other\n",
+        "You should use classes only if you have more than 1 function to it and if keep a internal state (with attributes) has sense.\n",
+        "Otherwise, if you want to regroup functions, just create a module in a new .py file.\n",
+        "\n",
+        "\n",
+        "Here's a breakdown of the key differences between functions and classes in programming:\n",
+        "\n",
+        "Functions:\n",
+        "\n",
+        "Purpose: Perform specific tasks or calculations.\n",
+        "Structure: Defined using the def keyword (in Python).\n",
+        "Inputs: Take arguments as input data.\n",
+        "Outputs: Return a value or multiple values.\n",
+        "Reusability: Can be called multiple times from different parts of the code.\n",
+        "Encapsulation: Do not encapsulate data and behavior together.\n",
+        "Classes:\n",
+        "\n",
+        "Purpose: Create blueprints for objects that represent real-world entities or abstract concepts.\n",
+        "Structure: Defined using the class keyword (in Python).\n",
+        "Attributes: Hold data (properties) associated with the object.\n",
+        "Methods: Define the behaviors (functions) that the object can perform.\n",
+        "Instances: Objects created from a class, each with its own unique set of attributes.\n",
+        "Encapsulation: Combine data (attributes) and behavior (methods) within a single unit, promoting modularity and data protection.\n",
+        "Key Distinctions:\n",
+        "\n",
+        "Organization: Functions are primarily for organizing code and performing actions, while classes are for modeling real-world entities and grouping related data and functionality.\n",
+        "Data Handling: Functions operate on data passed as arguments, while classes create objects that hold their own data (attributes).\n",
+        "Inheritance: Classes can inherit properties and methods from other classes, promoting code reusability and hierarchical relationships. Functions do not have inheritance.\n",
+        "When to Use Each:\n",
+        "\n",
+        "Use functions:\n",
+        "When you need to perform a specific task or calculation that doesn't require managing state or creating objects.\n",
+        "When you want to break down your code into reusable blocks.\n",
+        "Use classes:\n",
+        "When you need to model real-world entities or concepts with their own attributes and behaviors.\n",
+        "When you want to create reusable blueprints for objects.\n",
+        "When you need to organize code in a more object-oriented way, promoting modularity and encapsulation.\n",
+        "In essence:\n",
+        "\n",
+        "Functions: Focus on actions and code organization.\n",
+        "Classes: Focus on data modeling and object-oriented design.\n",
+        "Knowing when to use functions and classes effectively is a crucial aspect of programming, as it allows for better code organization, reusability, and maintainability."
+      ]
+    }
+  ]
+}
